@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    background-color: #dadada;
+}header{
+    background-color: black;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+header .logo img{
+    height: 50px;
+}
+header .logo{
+    padding: 10px 20px;
+}
+header .popup i{
+    margin: 20px 40px;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    font-size: 35px;
+}
+.popup {
+    position: relative;
+    display: inline-block;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    color: #fff;
+    text-align: center;
+    border: 1ps solid black;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    top: 90%;
+    right: 15%;
+}
+.popup .popuptext a{
+    text-decoration: none;
+}
+.popup .popuptext a p{
+    cursor: pointer;
+    padding: 20px;
+    color: black;
+}  
+.popup .popuptext a .exit{
+    border-top: 1px solid rgba(78, 78, 78, 0.301);
+}
+.popup .popuptext::after {
+    content: "";
+    transform: rotate(180deg);
+    position: absolute;
+    bottom: 100%;
+    left: 80%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgb(255, 255, 255) transparent transparent transparent;
+}
+  
+/* popup */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 0.4s;
+    animation: fadeIn 0.4s;
+}
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+} 
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+@media screen and (max-width:650px){
+    .menu a{
+        font-size: 4vw;
+    }
+    .registerNew{
+        margin-top: 20px;
+    }
+    .navigationToIndex a{
+        font-size: 15px;
+    }
+}
+.main_category{
+    width: 90%;
+    height: 100%;
+    margin: 50px auto;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    background-color: rgb(255, 255, 255);
+}
+.registration_category{
+    border-bottom: 1px solid black;
+    width: 100%;
+    margin: 0;
+    border-radius: 10px 10px 0 0 ;
+    background-color: rgb(255, 198, 40);
+}
+.registration_category h2{
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 7px;    
+}
+.center_category{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+.center_category .name_category p{
+    font-size: 25px;
+    font-weight: bold;
+}
+.center_category .name_category{
+    margin-bottom: 20px;
+    text-align: center;
+}
+.center_category .name_category input{
+    width: 350px;
+    margin-top: 20px;
+    padding: 5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid black;
+}
+.input_img{
+    border-radius: 10px;
+    height: 270px;
+    border: 1px solid black;
+    text-align: center;
+    background-color: rgb(216, 216, 216);
+    margin: 0 10px;
+}
+.file_selection{
+    margin-top: 50px;
+}
+.input_img input[type='file']{
+    display: none;
+}
+.input_img label {
+  background-color: #ff9900;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  margin: 10px;
+  padding: 6px 20px;
+}
+.input_img label:hover {
+    background-color: #db8400;
+}
+.input_img i{
+    font-size: 100px;
+    display: block;
+    margin-top: 50px;
+    color: rgb(190, 190, 190);
+}
+.registrationButton{
+    text-align: center;
+    margin-top: 20px;
+}
+.registrationButton button{
+    width: 300px;
+    padding: 5px;
+    margin-bottom: 5px;
+    background-color: #ff9900;
+    border: none;
+    border-radius:10px;
+    cursor: pointer;
+}
+
+.registrationButton button:hover {
+    background-color: #ffaf38;
+}
+@media screen and (max-width:450px){
+    .center_category .name_category input{
+        width: 250px;
+    }
+    .center_category .name_category p{
+        font-size: 20px;
+        margin-bottom: -10px;
+    }
+    header img{
+        height:50px;
+    }
+    header img{
+        margin-left: 10px;
+    }
+    
+}
+@media screen and (max-width:370px){
+    .registration_category h2{
+        font-size: 25px;   
+    }
+    .registrationButton button{
+        width: 250px;
+        margin-top: 20px;
+    }
+    header img{
+        margin-left: 10px;
+    }
+    header img{
+        height:40px;
+    }
+}
